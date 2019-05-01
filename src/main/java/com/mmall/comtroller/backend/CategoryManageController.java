@@ -35,7 +35,7 @@ public class CategoryManageController {
     @ResponseBody
     public ServerResponse addCategory(HttpServletRequest httpServletRequest, String categoryName, @RequestParam(value = "parentId",defaultValue = "0") int parentId){
        // User user = (User)session.getAttribute(Const.CURRENT_USER);
-        String loginToken = CookieUtil.readLoginToken(httpServletRequest);
+   /*     String loginToken = CookieUtil.readLoginToken(httpServletRequest);
         if (StringUtils.isBlank(loginToken)){
             return ServerResponse.createByErrorMessage("用户未登录，无法获取当前用户信息");
         }
@@ -48,7 +48,9 @@ public class CategoryManageController {
             return iCategoryService.addCategory(categoryName,parentId);
         }else {
             return ServerResponse.createByErrorMessage("无权限操作，需要管理员权限");
-        }
+        }*/
+
+        return iCategoryService.addCategory(categoryName,parentId);
     }
 
     @RequestMapping("set_category_name.do")

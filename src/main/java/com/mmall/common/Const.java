@@ -173,4 +173,8 @@ public class Const {
     }
 
 
+    public interface REDIS_LOCK{
+        String CLOSE_ORDER_TASK_LOCK = "CLOSE_ORDER_TASK_LOCK";
+    }
+
 }
